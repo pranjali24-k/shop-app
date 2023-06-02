@@ -152,6 +152,7 @@ if (!localStorage.getItem("currentUser")) {
    
     localStorage.setItem('total', JSON.stringify(giveprice(cartproducts)));
     cartproducts = [];
+    localStorage.removeItem('cartItems')
     printData(cartproducts);
     printcheckoutlist(cartproducts);
     window.open("../razorpay/index.html", "_blank");
